@@ -1,1 +1,476 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portfolio 388690314 — Tim Stanscheit</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+:root{--bg:#fff;--bg2:#f5f5f3;--text:#1a1a1a;--text2:#666;--border:rgba(0,0,0,0.1);--green:#1D9E75;--red:#E24B4A;--blue:#378ADD}
+@media(prefers-color-scheme:dark){:root{--bg:#1a1a1a;--bg2:#242424;--text:#f0f0f0;--text2:#999;--border:rgba(255,255,255,0.1)}}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);padding:1.5rem;font-size:14px}
+h1{font-size:18px;font-weight:500;margin-bottom:2px}
+.sub{font-size:12px;color:var(--text2);margin-bottom:1.5rem}
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--border);margin-bottom:1.5rem;flex-wrap:wrap}
+.tab{padding:7px 14px;background:none;border:none;cursor:pointer;font-size:13px;color:var(--text2);border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tab.active{color:var(--text);border-bottom-color:var(--text);font-weight:500}
+.panel{display:none}.panel.active{display:block}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:1.5rem}
+.metric{background:var(--bg2);border-radius:10px;padding:12px 14px}
+.mlabel{font-size:10px;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:4px}
+.mvalue{font-size:20px;font-weight:500}
+.msub{font-size:11px;color:var(--text2);margin-top:2px}
+.card{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:1rem 1.25rem;margin-bottom:12px}
+.ctitle{font-size:11px;font-weight:500;color:var(--text2);text-transform:uppercase;letter-spacing:.05em;margin-bottom:1rem}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{text-align:left;padding:5px 8px;color:var(--text2);font-weight:400;border-bottom:1px solid var(--border);font-size:11px;white-space:nowrap}
+td{padding:6px 8px;border-bottom:1px solid var(--border)}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--bg2)}
+.up{color:var(--green)}.down{color:var(--red)}
+small{font-size:10px}
+.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:11px;color:var(--text2);margin-bottom:10px}
+.legend span{display:flex;align-items:center;gap:4px}
+.dot{width:8px;height:8px;border-radius:2px;display:inline-block}
+.sbtn{display:flex;gap:6px;margin-bottom:1rem}
+.sbtn button{padding:5px 12px;font-size:11px;border:1px solid var(--border);border-radius:6px;background:none;cursor:pointer;color:var(--text2)}
+.sbtn button.active{background:var(--bg2);color:var(--text);font-weight:500}
+footer{font-size:10px;color:var(--text2);margin-top:2rem;text-align:center}
+</style>
+</head>
+<body>
+<h1>Depot 388690314 — Tim Stanscheit</h1>
+<p class="sub">Updated: 06 Jun 2026 · Consorsbank · <a href="https://github.com/Stanekkk/Portfolio-Agent">GitHub</a></p>
+<div class="tabs">
+  <button class="tab active" onclick="showTab('ov',this)">Overview</button>
+  <button class="tab" onclick="showTab('hd',this)">Holdings</button>
+  <button class="tab" onclick="showTab('dv',this)">Dividends</button>
+  <button class="tab" onclick="showTab('pj',this)">10-yr Projection</button>
+</div>
+
+<!-- OVERVIEW -->
+<div id="ov" class="panel active">
+  <div class="metrics">
+    <div class="metric"><div class="mlabel">Total value</div><div class="mvalue">€299,569.59</div><div class="msub">06 Jun 2026</div></div>
+    <div class="metric"><div class="mlabel">Since purchase</div><div class="mvalue up">+€82,209.77</div><div class="msub up">+37.82%</div></div>
+    <div class="metric"><div class="mlabel">Dividends net</div><div class="mvalue up">€5,692.35</div><div class="msub">2025+2026 YTD</div></div>
+    <div class="metric"><div class="mlabel">EUR/USD</div><div class="mvalue" style="font-size:16px">1.164</div><div class="msub">CHF/EUR 1.0908</div></div>
+  </div>
+  <div class="card"><div class="ctitle">All positions</div>
+    <table>
+      <thead><tr><th>Security</th><th style="text-align:right">Value</th><th style="text-align:right">Since buy</th><th style="text-align:right">Div. net</th></tr></thead>
+      <tbody><tr>
+      <td style="font-weight:500">SPDR S&P EO Div.Aristocrats</td>
+      <td style="text-align:right">€64,935.36</td>
+      <td style="text-align:right"><span class="up">+€8,139.46<br><small>+14.3%</small></span><span style="display:inline-block;width:5px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€1,915.49</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Alphabet Inc. C</td>
+      <td style="text-align:right">€54,962.10</td>
+      <td style="text-align:right"><span class="up">+€27,017.28<br><small>+96.7%</small></span><span style="display:inline-block;width:32px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€111.21</span></td>
+    </tr><tr>
+      <td style="font-weight:500">TSMC ADR/5</td>
+      <td style="text-align:right">€25,595.50</td>
+      <td style="text-align:right"><span class="up">+€4,729.31<br><small>+22.7%</small></span><span style="display:inline-block;width:8px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€51.27</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Roche Holding PS</td>
+      <td style="text-align:right">€24,384.35</td>
+      <td style="text-align:right"><span class="up">+€4,097.99<br><small>+20.2%</small></span><span style="display:inline-block;width:7px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€931.61</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Rheinmetall AG</td>
+      <td style="text-align:right">€22,655.60</td>
+      <td style="text-align:right"><span class="up">+€13,278.15<br><small>+141.6%</small></span><span style="display:inline-block;width:47px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€314.77</span></td>
+    </tr><tr>
+      <td style="font-weight:500">AMD Inc.</td>
+      <td style="text-align:right">€16,198.00</td>
+      <td style="text-align:right"><span class="up">+€8,724.25<br><small>+116.7%</small></span><span style="display:inline-block;width:39px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span style="color:#999">—</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Repsol SA</td>
+      <td style="text-align:right">€11,201.16</td>
+      <td style="text-align:right"><span class="up">+€5,595.16<br><small>+99.8%</small></span><span style="display:inline-block;width:33px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€453.43</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Basler AG</td>
+      <td style="text-align:right">€10,480.00</td>
+      <td style="text-align:right"><span class="up">+€1,465.74<br><small>+16.3%</small></span><span style="display:inline-block;width:5px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span style="color:#999">—</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Marvell Technology</td>
+      <td style="text-align:right">€8,768.50</td>
+      <td style="text-align:right"><span class="down">€1,050.67<br><small>-10.7%</small></span><span style="display:inline-block;width:4px;height:3px;background:#E24B4A;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span style="color:#999">—</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Motor Oil (Hellas)</td>
+      <td style="text-align:right">€8,000.00</td>
+      <td style="text-align:right"><span class="up">+€1,992.93<br><small>+33.2%</small></span><span style="display:inline-block;width:11px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€146.30</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Erste Group Bank</td>
+      <td style="text-align:right">€7,511.00</td>
+      <td style="text-align:right"><span class="up">+€2,536.19<br><small>+51.0%</small></span><span style="display:inline-block;width:17px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€228.94</span></td>
+    </tr><tr>
+      <td style="font-weight:500">OMV AG</td>
+      <td style="text-align:right">€6,440.97</td>
+      <td style="text-align:right"><span class="up">+€2,340.97<br><small>+57.1%</small></span><span style="display:inline-block;width:19px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€343.53</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Allianz SE</td>
+      <td style="text-align:right">€6,348.42</td>
+      <td style="text-align:right"><span class="up">+€966.68<br><small>+18.0%</small></span><span style="display:inline-block;width:6px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€446.63</span></td>
+    </tr><tr>
+      <td style="font-weight:500">iShares Euro Stoxx Sel.Div.30</td>
+      <td style="text-align:right">€5,732.73</td>
+      <td style="text-align:right"><span class="up">+€1,368.15<br><small>+31.4%</small></span><span style="display:inline-block;width:10px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€182.29</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Rubis SCA</td>
+      <td style="text-align:right">€5,657.72</td>
+      <td style="text-align:right"><span class="up">+€1,557.72<br><small>+38.0%</small></span><span style="display:inline-block;width:13px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€261.08</span></td>
+    </tr><tr>
+      <td style="font-weight:500">E.ON SE</td>
+      <td style="text-align:right">€5,652.53</td>
+      <td style="text-align:right"><span class="up">+€1,552.53<br><small>+37.9%</small></span><span style="display:inline-block;width:13px;height:3px;background:#1D9E75;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€277.05</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Elmos Semiconductor</td>
+      <td style="text-align:right">€5,619.20</td>
+      <td style="text-align:right"><span class="down">€372.83<br><small>-6.2%</small></span><span style="display:inline-block;width:2px;height:3px;background:#E24B4A;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span style="color:#999">—</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Southern Copper</td>
+      <td style="text-align:right">€3,364.69</td>
+      <td style="text-align:right"><span class="down">€572.51<br><small>-14.5%</small></span><span style="display:inline-block;width:5px;height:3px;background:#E24B4A;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€18.70</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Taseko Mines</td>
+      <td style="text-align:right">€3,060.75</td>
+      <td style="text-align:right"><span class="down">€983.22<br><small>-24.3%</small></span><span style="display:inline-block;width:8px;height:3px;background:#E24B4A;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span style="color:#999">—</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Freeport-McMoRan</td>
+      <td style="text-align:right">€2,860.00</td>
+      <td style="text-align:right"><span class="down">€133.47<br><small>-4.5%</small></span><span style="display:inline-block;width:1px;height:3px;background:#E24B4A;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€4.65</span></td>
+    </tr><tr>
+      <td style="font-weight:500">Sixt SE</td>
+      <td style="text-align:right">€141.00</td>
+      <td style="text-align:right"><span class="down">€11.05<br><small>-7.3%</small></span><span style="display:inline-block;width:2px;height:3px;background:#E24B4A;border-radius:2px;vertical-align:middle;margin-left:4px"></span></td>
+      <td style="text-align:right"><span class="up">€5.40</span></td>
+    </tr></tbody>
+      <tfoot><tr style="font-weight:500;border-top:1px solid var(--border)">
+        <td>Total</td>
+        <td style="text-align:right">€299,569.59</td>
+        <td style="text-align:right"><span class="up">+€82,209.77</span></td>
+        <td style="text-align:right"><span class="up">€5,692.35</span></td>
+      </tr></tfoot>
+    </table>
+  </div>
+</div>
+
+<!-- HOLDINGS -->
+<div id="hd" class="panel">
+  <div class="card"><div class="ctitle">Country allocation</div>
+    <div style="height:240px"><canvas id="hc"></canvas></div>
+  </div>
+  <div class="card"><div class="ctitle">21 positions</div>
+    <table>
+      <thead><tr><th>Security</th><th></th><th style="text-align:right">Shares</th><th style="text-align:right">Price</th><th style="text-align:right">Value</th><th style="text-align:right">Since buy</th></tr></thead>
+      <tbody><tr>
+      <td>SPDR S&P EO Div.Aristocrats</td>
+      <td>🇮🇪</td>
+      <td style="text-align:right;color:#999">2267.30</td>
+      <td style="text-align:right;color:#999">€28.64</td>
+      <td style="text-align:right;font-weight:500">€64,935.36</td>
+      <td style="text-align:right"><span class="up">+€8,139.46<br><small>+14.3%</small></span></td>
+    </tr><tr>
+      <td>Alphabet Inc. C</td>
+      <td>🇺🇸</td>
+      <td style="text-align:right;color:#999">173.00</td>
+      <td style="text-align:right;color:#999">€317.70</td>
+      <td style="text-align:right;font-weight:500">€54,962.10</td>
+      <td style="text-align:right"><span class="up">+€27,017.28<br><small>+96.7%</small></span></td>
+    </tr><tr>
+      <td>TSMC ADR/5</td>
+      <td>🇹🇼</td>
+      <td style="text-align:right;color:#999">71.00</td>
+      <td style="text-align:right;color:#999">€360.50</td>
+      <td style="text-align:right;font-weight:500">€25,595.50</td>
+      <td style="text-align:right"><span class="up">+€4,729.31<br><small>+22.7%</small></span></td>
+    </tr><tr>
+      <td>Roche Holding PS</td>
+      <td>🇨🇭</td>
+      <td style="text-align:right;color:#999">69.00</td>
+      <td style="text-align:right;color:#999">€353.40</td>
+      <td style="text-align:right;font-weight:500">€24,384.35</td>
+      <td style="text-align:right"><span class="up">+€4,097.99<br><small>+20.2%</small></span></td>
+    </tr><tr>
+      <td>Rheinmetall AG</td>
+      <td>🇩🇪</td>
+      <td style="text-align:right;color:#999">19.00</td>
+      <td style="text-align:right;color:#999">€1,192.40</td>
+      <td style="text-align:right;font-weight:500">€22,655.60</td>
+      <td style="text-align:right"><span class="up">+€13,278.15<br><small>+141.6%</small></span></td>
+    </tr><tr>
+      <td>AMD Inc.</td>
+      <td>🇺🇸</td>
+      <td style="text-align:right;color:#999">40.00</td>
+      <td style="text-align:right;color:#999">€404.95</td>
+      <td style="text-align:right;font-weight:500">€16,198.00</td>
+      <td style="text-align:right"><span class="up">+€8,724.25<br><small>+116.7%</small></span></td>
+    </tr><tr>
+      <td>Repsol SA</td>
+      <td>🇪🇸</td>
+      <td style="text-align:right;color:#999">493.66</td>
+      <td style="text-align:right;color:#999">€22.69</td>
+      <td style="text-align:right;font-weight:500">€11,201.16</td>
+      <td style="text-align:right"><span class="up">+€5,595.16<br><small>+99.8%</small></span></td>
+    </tr><tr>
+      <td>Basler AG</td>
+      <td>🇩🇪</td>
+      <td style="text-align:right;color:#999">400.00</td>
+      <td style="text-align:right;color:#999">€26.20</td>
+      <td style="text-align:right;font-weight:500">€10,480.00</td>
+      <td style="text-align:right"><span class="up">+€1,465.74<br><small>+16.3%</small></span></td>
+    </tr><tr>
+      <td>Marvell Technology</td>
+      <td>🇺🇸</td>
+      <td style="text-align:right;color:#999">38.00</td>
+      <td style="text-align:right;color:#999">€230.75</td>
+      <td style="text-align:right;font-weight:500">€8,768.50</td>
+      <td style="text-align:right"><span class="down">€1,050.67<br><small>-10.7%</small></span></td>
+    </tr><tr>
+      <td>Motor Oil (Hellas)</td>
+      <td>🇬🇷</td>
+      <td style="text-align:right;color:#999">200.00</td>
+      <td style="text-align:right;color:#999">€40.00</td>
+      <td style="text-align:right;font-weight:500">€8,000.00</td>
+      <td style="text-align:right"><span class="up">+€1,992.93<br><small>+33.2%</small></span></td>
+    </tr><tr>
+      <td>Erste Group Bank</td>
+      <td>🇦🇹</td>
+      <td style="text-align:right;color:#999">74.00</td>
+      <td style="text-align:right;color:#999">€101.50</td>
+      <td style="text-align:right;font-weight:500">€7,511.00</td>
+      <td style="text-align:right"><span class="up">+€2,536.19<br><small>+51.0%</small></span></td>
+    </tr><tr>
+      <td>OMV AG</td>
+      <td>🇦🇹</td>
+      <td style="text-align:right;color:#999">100.48</td>
+      <td style="text-align:right;color:#999">€64.10</td>
+      <td style="text-align:right;font-weight:500">€6,440.97</td>
+      <td style="text-align:right"><span class="up">+€2,340.97<br><small>+57.1%</small></span></td>
+    </tr><tr>
+      <td>Allianz SE</td>
+      <td>🇩🇪</td>
+      <td style="text-align:right;color:#999">17.05</td>
+      <td style="text-align:right;color:#999">€372.40</td>
+      <td style="text-align:right;font-weight:500">€6,348.42</td>
+      <td style="text-align:right"><span class="up">+€966.68<br><small>+18.0%</small></span></td>
+    </tr><tr>
+      <td>iShares Euro Stoxx Sel.Div.30</td>
+      <td>🇩🇪</td>
+      <td style="text-align:right;color:#999">252.32</td>
+      <td style="text-align:right;color:#999">€22.72</td>
+      <td style="text-align:right;font-weight:500">€5,732.73</td>
+      <td style="text-align:right"><span class="up">+€1,368.15<br><small>+31.4%</small></span></td>
+    </tr><tr>
+      <td>Rubis SCA</td>
+      <td>🇫🇷</td>
+      <td style="text-align:right;color:#999">159.91</td>
+      <td style="text-align:right;color:#999">€35.38</td>
+      <td style="text-align:right;font-weight:500">€5,657.72</td>
+      <td style="text-align:right"><span class="up">+€1,557.72<br><small>+38.0%</small></span></td>
+    </tr><tr>
+      <td>E.ON SE</td>
+      <td>🇩🇪</td>
+      <td style="text-align:right;color:#999">310.58</td>
+      <td style="text-align:right;color:#999">€18.20</td>
+      <td style="text-align:right;font-weight:500">€5,652.53</td>
+      <td style="text-align:right"><span class="up">+€1,552.53<br><small>+37.9%</small></span></td>
+    </tr><tr>
+      <td>Elmos Semiconductor</td>
+      <td>🇩🇪</td>
+      <td style="text-align:right;color:#999">32.00</td>
+      <td style="text-align:right;color:#999">€175.60</td>
+      <td style="text-align:right;font-weight:500">€5,619.20</td>
+      <td style="text-align:right"><span class="down">€372.83<br><small>-6.2%</small></span></td>
+    </tr><tr>
+      <td>Southern Copper</td>
+      <td>🇺🇸</td>
+      <td style="text-align:right;color:#999">22.41</td>
+      <td style="text-align:right;color:#999">€150.15</td>
+      <td style="text-align:right;font-weight:500">€3,364.69</td>
+      <td style="text-align:right"><span class="down">€572.51<br><small>-14.5%</small></span></td>
+    </tr><tr>
+      <td>Taseko Mines</td>
+      <td>🇨🇦</td>
+      <td style="text-align:right;color:#999">530.00</td>
+      <td style="text-align:right;color:#999">€5.78</td>
+      <td style="text-align:right;font-weight:500">€3,060.75</td>
+      <td style="text-align:right"><span class="down">€983.22<br><small>-24.3%</small></span></td>
+    </tr><tr>
+      <td>Freeport-McMoRan</td>
+      <td>🇺🇸</td>
+      <td style="text-align:right;color:#999">52.00</td>
+      <td style="text-align:right;color:#999">€55.00</td>
+      <td style="text-align:right;font-weight:500">€2,860.00</td>
+      <td style="text-align:right"><span class="down">€133.47<br><small>-4.5%</small></span></td>
+    </tr><tr>
+      <td>Sixt SE</td>
+      <td>🇩🇪</td>
+      <td style="text-align:right;color:#999">2.00</td>
+      <td style="text-align:right;color:#999">€70.50</td>
+      <td style="text-align:right;font-weight:500">€141.00</td>
+      <td style="text-align:right"><span class="down">€11.05<br><small>-7.3%</small></span></td>
+    </tr></tbody>
+    </table>
+  </div>
+</div>
+
+<!-- DIVIDENDS -->
+<div id="dv" class="panel">
+  <div class="metrics">
+    <div class="metric"><div class="mlabel">2025 gross</div><div class="mvalue">€5,388.62</div><div class="msub">35 events</div></div>
+    <div class="metric"><div class="mlabel">2025 WHT</div><div class="mvalue down">€364.35</div></div>
+    <div class="metric"><div class="mlabel">2025 net</div><div class="mvalue up">€5,024.27</div></div>
+    <div class="metric"><div class="mlabel">2026 YTD net</div><div class="mvalue up">€1,730.16</div><div class="msub">18 events</div></div>
+  </div>
+  <div class="card"><div class="ctitle">Monthly income 2025 vs 2026</div>
+    <div class="legend"><span><span class="dot" style="background:#378ADD"></span>2025</span><span><span class="dot" style="background:#1D9E75"></span>2026</span></div>
+    <div style="height:220px"><canvas id="dc"></canvas></div>
+  </div>
+</div>
+
+<!-- PROJECTION -->
+<div id="pj" class="panel">
+  <div class="sbtn">
+    <button class="active" onclick="setProj('base',this)">Base</button>
+    <button onclick="setProj('bull',this)">Optimistic</button>
+    <button onclick="setProj('bear',this)">Conservative</button>
+  </div>
+  <div id="pj-metrics"></div>
+  <div class="card"><div class="ctitle">Annual net dividend — 10-year projection</div>
+    <div class="legend"><span><span class="dot" style="background:#378ADD"></span>Annual</span><span><span class="dot" style="background:#1D9E75"></span>Cumulative</span></div>
+    <div style="height:260px"><canvas id="pc"></canvas></div>
+    <p style="font-size:10px;color:var(--text2);margin-top:8px">Holdings assumed unchanged · Not financial advice</p>
+  </div>
+  <div class="card"><div class="ctitle">Year-by-year</div>
+    <table id="pj-table">
+      <thead><tr><th>Year</th><th style="text-align:right">Annual (net)</th><th style="text-align:right">Growth</th><th style="text-align:right">Cumulative</th><th style="text-align:right">Yield on cost</th></tr></thead>
+      <tbody id="pj-tbody"></tbody>
+    </table>
+  </div>
+</div>
+
+<footer>Yahoo Finance · ~15min delay · Not financial advice</footer>
+
+<script>
+const PROJ = {
+  base: [[2026, 3979.88, 3979.88, 0.0504], [2027, 4180.32, 8160.2, 0.0504], [2028, 4390.85, 12551.05, 0.0504], [2029, 4611.99, 17163.05, 0.0504], [2030, 4844.27, 22007.31, 0.0504], [2031, 5088.24, 27095.56, 0.0504], [2032, 5344.5, 32440.06, 0.0504], [2033, 5613.67, 38053.73, 0.0504], [2034, 5896.39, 43950.12, 0.0504], [2035, 6193.35, 50143.47, 0.0504]],
+  bull: [[2026, 3979.88, 3979.88, 0.0823], [2027, 4307.52, 8287.4, 0.0823], [2028, 4662.13, 12949.53, 0.0823], [2029, 5045.93, 17995.46, 0.0823], [2030, 5461.33, 23456.79, 0.0823], [2031, 5910.93, 29367.72, 0.0823], [2032, 6397.54, 35765.26, 0.0823], [2033, 6924.21, 42689.46, 0.0823], [2034, 7494.23, 50183.69, 0.0823], [2035, 8111.18, 58294.88, 0.0823]],
+  bear: [[2026, 3979.88, 3979.88, 0.0181], [2027, 4051.91, 8031.79, 0.0181], [2028, 4125.24, 12157.03, 0.0181], [2029, 4199.9, 16356.93, 0.0181], [2030, 4275.91, 20632.84, 0.0181], [2031, 4353.3, 24986.14, 0.0181], [2032, 4432.08, 29418.22, 0.0181], [2033, 4512.3, 33930.52, 0.0181], [2034, 4593.96, 38524.48, 0.0181], [2035, 4677.1, 43201.58, 0.0181]]
+};
+const MI25 = [91.31, 0, 63.07, 754.49, 1364.8600000000001, 1209.74, 434.72999999999996, 0, 1385.29, 51.52, 0, 33.61];
+const MI26 = [270.8, 18.7, 849.1400000000001, 211.37, 380.15000000000003, 0, 0, 0, 0, 0, 0, 0];
+const COST = 217359.82;
+const N25 = 5024.27;
+let curProj = 'base';
+let charts = {};
+
+function dc(id) { if(charts[id]) { charts[id].destroy(); delete charts[id]; } }
+
+function showTab(id, btn) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  if(id==='hd') renderHoldings();
+  if(id==='dv') renderDividends();
+  if(id==='pj') renderProjection();
+}
+
+function renderHoldings() {
+  dc('hc');
+  const labels = ["\ud83c\uddfa\ud83c\uddf8 USA", "\ud83c\uddee\ud83c\uddea Ireland", "\ud83c\udde9\ud83c\uddea Germany", "\ud83c\uddf9\ud83c\uddfc Taiwan", "\ud83c\udde8\ud83c\udded Switzerland", "\ud83c\udde6\ud83c\uddf9 Austria", "\ud83c\uddea\ud83c\uddf8 Spain", "\ud83c\uddec\ud83c\uddf7 Greece", "\ud83c\uddeb\ud83c\uddf7 France", "\ud83c\udde8\ud83c\udde6 Canada"];
+  const vals = [86153.29, 64935.36, 56629.48, 25595.5, 24384.35, 13951.97, 11201.16, 8000.0, 5657.72, 3060.75];
+  const cc = ['#378ADD','#1D9E75','#EF9F27','#D4537E','#7F77DD','#D85A30','#639922','#53ABD1','#888780','#E24B4A'];
+  charts['hc'] = new Chart(document.getElementById('hc'), {
+    type: 'doughnut',
+    data: { labels, datasets: [{ data: vals, backgroundColor: cc, borderWidth: 0 }] },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'right', labels: { font: { size: 11 }, boxWidth: 10, padding: 8 } } } }
+  });
+}
+
+function renderDividends() {
+  dc('dc');
+  const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+  charts['dc'] = new Chart(document.getElementById('dc'), {
+    type: 'bar',
+    data: { labels: months, datasets: [
+      { label: '2025', data: MI25, backgroundColor: '#378ADD', borderRadius: 3 },
+      { label: '2026', data: MI26, backgroundColor: '#1D9E75', borderRadius: 3 }
+    ]},
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+      scales: { x: { ticks: { font: { size: 10 }, autoSkip: false } }, y: { ticks: { callback: v => '€'+Math.round(v), font: { size: 10 } } } } }
+  });
+}
+
+function setProj(sc, btn) {
+  curProj = sc;
+  document.querySelectorAll('.sbtn button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderProjection();
+}
+
+function renderProjection() {
+  const yrs = PROJ[curProj];
+  const y0 = yrs[0], y9 = yrs[9], bl = y0[3];
+
+  document.getElementById('pj-metrics').innerHTML = `
+    <div class="metrics">
+      <div class="metric"><div class="mlabel">2025 actual net</div><div class="mvalue">€${N25.toLocaleString('de-DE',{minimumFractionDigits:2})}</div></div>
+      <div class="metric"><div class="mlabel">2026 projected</div><div class="mvalue">€${y0[1].toLocaleString('de-DE',{minimumFractionDigits:2})}</div></div>
+      <div class="metric"><div class="mlabel">2035 projected</div><div class="mvalue up">€${y9[1].toLocaleString('de-DE',{minimumFractionDigits:2})}</div></div>
+      <div class="metric"><div class="mlabel">10-yr cumulative</div><div class="mvalue up">€${y9[2].toLocaleString('de-DE',{minimumFractionDigits:2})}</div></div>
+    </div>`;
+
+  document.getElementById('pj-tbody').innerHTML = yrs.map((y,i) =>
+    `<tr><td style="font-weight:500">${y[0]}</td>
+    <td style="text-align:right">€${y[1].toLocaleString('de-DE',{minimumFractionDigits:2})}</td>
+    <td style="text-align:right;color:var(--text2)">${i===0?'—':'+'+(bl*100).toFixed(1)+'%'}</td>
+    <td style="text-align:right">€${y[2].toLocaleString('de-DE',{minimumFractionDigits:2})}</td>
+    <td style="text-align:right;color:var(--text2)">${(y[1]/COST*100).toFixed(1)}%</td></tr>`
+  ).join('');
+
+  dc('pc');
+  charts['pc'] = new Chart(document.getElementById('pc'), {
+    type: 'bar',
+    data: {
+      labels: ['2025 act', ...yrs.map(y => ''+y[0])],
+      datasets: [
+        { label: 'Annual', data: [N25, ...yrs.map(y=>y[1])], backgroundColor: ['rgba(136,135,128,.35)',...yrs.map(()=>'#378ADD')], borderRadius: 3, yAxisID: 'y', order: 2 },
+        { label: 'Cumulative', data: [null, ...yrs.map(y=>y[2])], type: 'line', borderColor: '#1D9E75', borderWidth: 2, pointRadius: 3, tension: .4, fill: false, yAxisID: 'y2', order: 1 }
+      ]
+    },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } },
+      scales: {
+        y: { position: 'left', grid: { display: false }, ticks: { callback: v => '€'+Math.round(v/1000)+'k', font: { size: 10 } } },
+        y2: { position: 'right', ticks: { callback: v => '€'+Math.round(v/1000)+'k', font: { size: 10 } }, grid: { color: 'rgba(128,128,128,.1)' } },
+        x: { ticks: { font: { size: 10 }, autoSkip: false } }
+      }
+    }
+  });
+}
+</script>
+</body>
+</html>
