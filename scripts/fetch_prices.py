@@ -1,6 +1,3 @@
-cat /mnt/user-data/outputs/fetch_prices.py
-Output
-
 import json
 import os
 from datetime import datetime, timezone
