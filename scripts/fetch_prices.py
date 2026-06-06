@@ -1,5 +1,3 @@
-bash
-
 cat /mnt/user-data/outputs/fetch_prices.py
 Output
 
