@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-06-16T00:24:21.871047+00:00",
-  "eurusd": 1.1592857837677002,
-  "chfeur": 1.0852999687194824,
+  "as_of": "2026-06-17T00:10:55.896742+00:00",
+  "eurusd": 1.1615750789642334,
+  "chfeur": 1.0855000019073486,
   "total_value_eur": NaN,
   "total_cost_eur": 217330.82,
   "total_gain_eur": NaN,
@@ -37,11 +37,11 @@
       "name": "Alphabet Inc. C",
       "country": "USA",
       "shares": 173.0,
-      "price_eur": 316.6691,
-      "value_eur": 54783.75,
+      "price_eur": 319.48,
+      "value_eur": 55270.04,
       "cost_eur": 27944.82,
-      "gain_eur": 26838.93,
-      "gain_pct": 96.04,
+      "gain_eur": 27325.22,
+      "gain_pct": 97.78,
       "div_net_eur": 116.93
     },
     {
@@ -97,11 +97,11 @@
       "name": "Freeport-McMoRan",
       "country": "USA",
       "shares": 52.0,
-      "price_eur": 60.4941,
-      "value_eur": 3145.69,
+      "price_eur": 60.3921,
+      "value_eur": 3140.39,
       "cost_eur": 2993.47,
-      "gain_eur": 152.22,
-      "gain_pct": 5.09,
+      "gain_eur": 146.92,
+      "gain_pct": 4.91,
       "div_net_eur": 4.65
     },
     {
@@ -121,11 +121,11 @@
       "name": "Marvell Technology",
       "country": "USA",
       "shares": 38.0,
-      "price_eur": 266.4399,
-      "value_eur": 10124.72,
+      "price_eur": 239.907,
+      "value_eur": 9116.47,
       "cost_eur": 9819.17,
-      "gain_eur": 305.55,
-      "gain_pct": 3.11,
+      "gain_eur": -702.7,
+      "gain_pct": -7.16,
       "div_net_eur": 0
     },
     {
@@ -217,11 +217,11 @@
       "name": "TSMC ADR/5",
       "country": "Taiwan",
       "shares": 71.0,
-      "price_eur": 380.7517,
-      "value_eur": 27033.37,
+      "price_eur": 366.597,
+      "value_eur": 26028.39,
       "cost_eur": 20866.19,
-      "gain_eur": 6167.18,
-      "gain_pct": 29.56,
+      "gain_eur": 5162.2,
+      "gain_pct": 24.74,
       "div_net_eur": 51.27
     },
     {
@@ -229,11 +229,11 @@
       "name": "AMD Inc.",
       "country": "USA",
       "shares": 40.0,
-      "price_eur": 472.0665,
-      "value_eur": 18882.66,
+      "price_eur": 436.726,
+      "value_eur": 17469.04,
       "cost_eur": 7473.75,
-      "gain_eur": 11408.91,
-      "gain_pct": 152.65,
+      "gain_eur": 9995.29,
+      "gain_pct": 133.74,
       "div_net_eur": 0
     },
     {
@@ -241,11 +241,11 @@
       "name": "Southern Copper",
       "country": "USA",
       "shares": 22.40887,
-      "price_eur": 166.6716,
-      "value_eur": 3734.92,
+      "price_eur": 167.4709,
+      "value_eur": 3752.83,
       "cost_eur": 3937.2,
-      "gain_eur": -202.28,
-      "gain_pct": -5.14,
+      "gain_eur": -184.37,
+      "gain_pct": -4.68,
       "div_net_eur": 18.7
     },
     {
@@ -253,11 +253,11 @@
       "name": "Taseko Mines",
       "country": "Canada",
       "shares": 530.0,
-      "price_eur": 6.6938,
-      "value_eur": 3547.71,
+      "price_eur": 6.7236,
+      "value_eur": 3563.51,
       "cost_eur": 4043.97,
-      "gain_eur": -496.26,
-      "gain_pct": -12.27,
+      "gain_eur": -480.46,
+      "gain_pct": -11.88,
       "div_net_eur": 0
     }
   ]
