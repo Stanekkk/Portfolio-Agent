@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-09-05T00:29:39.472068+00:00",
-  "eurusd": 1.1621150970458984,
-  "chfeur": 1.0628000497817993,
+  "as_of": "2026-09-08T00:49:35.122951+00:00",
+  "eurusd": 1.1629259586334229,
+  "chfeur": 1.0622999668121338,
   "total_value_eur": NaN,
   "total_cost_eur": 217330.82,
   "total_gain_eur": NaN,
@@ -157,11 +157,11 @@
       "name": "Repsol SA",
       "country": "Spain",
       "shares": 493.66063,
-      "price_eur": NaN,
-      "value_eur": NaN,
+      "price_eur": 28.17,
+      "value_eur": 13906.42,
       "cost_eur": 5606.0,
-      "gain_eur": NaN,
-      "gain_pct": NaN,
+      "gain_eur": 8300.42,
+      "gain_pct": 148.06,
       "div_net_eur": 465.43
     },
     {
