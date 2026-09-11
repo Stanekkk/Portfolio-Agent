@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-09-10T00:43:32.692446+00:00",
-  "eurusd": 1.1634671688079834,
-  "chfeur": 1.0607000589370728,
+  "as_of": "2026-09-11T00:42:05.084341+00:00",
+  "eurusd": 1.1617100238800049,
+  "chfeur": 1.0585999488830566,
   "total_value_eur": NaN,
   "total_cost_eur": 217330.82,
   "total_gain_eur": NaN,
@@ -153,28 +153,28 @@
       "div_net_eur": 343.53
     },
     {
-      "wkn": "876845",
-      "name": "Repsol SA",
-      "country": "Spain",
-      "shares": 493.66063,
-      "price_eur": NaN,
-      "value_eur": NaN,
-      "cost_eur": 5606.0,
-      "gain_eur": NaN,
-      "gain_pct": NaN,
-      "div_net_eur": 465.43
-    },
-    {
       "wkn": "A424UK",
       "name": "Roche Holding PS",
       "country": "Switzerland",
       "shares": 69.0,
-      "price_eur": 377.8214,
-      "value_eur": 26069.68,
+      "price_eur": 373.2623,
+      "value_eur": 25755.1,
       "cost_eur": 20286.36,
-      "gain_eur": 5783.32,
-      "gain_pct": 28.51,
+      "gain_eur": 5468.74,
+      "gain_pct": 26.96,
       "div_net_eur": 931.61
+    },
+    {
+      "wkn": "876845",
+      "name": "Repsol SA",
+      "country": "Spain",
+      "shares": 493.66063,
+      "price_eur": 28.91,
+      "value_eur": 14271.73,
+      "cost_eur": 5606.0,
+      "gain_eur": 8665.73,
+      "gain_pct": 154.58,
+      "div_net_eur": 465.43
     },
     {
       "wkn": "A2DUVQ",
