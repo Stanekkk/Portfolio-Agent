@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-09-12T00:48:46.870626+00:00",
-  "eurusd": 1.1602274179458618,
-  "chfeur": 1.0551999807357788,
+  "as_of": "2026-09-15T01:05:02.637648+00:00",
+  "eurusd": 1.1547343730926514,
+  "chfeur": 1.0591000318527222,
   "total_value_eur": NaN,
   "total_cost_eur": 217330.82,
   "total_gain_eur": NaN,
@@ -169,11 +169,11 @@
       "name": "Roche Holding PS",
       "country": "Switzerland",
       "shares": 69.0,
-      "price_eur": 372.0635,
-      "value_eur": 25672.38,
+      "price_eur": NaN,
+      "value_eur": NaN,
       "cost_eur": 20286.36,
-      "gain_eur": 5386.02,
-      "gain_pct": 26.55,
+      "gain_eur": NaN,
+      "gain_pct": NaN,
       "div_net_eur": 931.61
     },
     {
